@@ -15,7 +15,7 @@ open('ComeAndGetYourLove.mp3', 'wb').write(r.content)
 
 print("Hello dear stupid person \n I am Da2dalus \n I am here to tell you that you were hacked by me or by some \n other handsome person. \n I hope that next time you will be more carefull.")
 print("You do not have a lot of time, so please put all your files on a usb or else \n they will be destroyed. \n When the song is done playing there will be no \n coming back!!!")
-print("Don't even think about restarting or quitting this program!!!!!!!!")
+print("Don't even think about restarting your computer or quitting this program!!!!!!!!")
 
 winsound.PlaySound("ComeAndGetYourLove.mp3", winsound.SND_ASYNC | winsound.SND_ALIAS )
 
